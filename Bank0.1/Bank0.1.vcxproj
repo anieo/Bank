@@ -136,9 +136,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CDashBoard.cpp" />
     <ClCompile Include="RegistrationForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CDashBoard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="RegistrationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

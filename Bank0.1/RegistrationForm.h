@@ -1,4 +1,5 @@
 #pragma once
+#include "Header.h"
 
 namespace Bank01 {
 
@@ -226,6 +227,7 @@ namespace Bank01 {
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"SIGN IN";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &RegistrationForm::SignInValidation);
 			// 
 			// pictureBox3
 			// 
@@ -498,7 +500,7 @@ namespace Bank01 {
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(134, 6);
+			this->pictureBox4->Location = System::Drawing::Point(157, 6);
 			this->pictureBox4->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(59, 64);
@@ -515,8 +517,8 @@ namespace Bank01 {
 			this->ClientSize = System::Drawing::Size(354, 571);
 			this->ControlBox = false;
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->SignUpPanel);
 			this->Controls->Add(this->SignInPanel);
+			this->Controls->Add(this->SignUpPanel);
 			this->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(103)), static_cast<System::Int32>(static_cast<System::Byte>(111)),
@@ -543,6 +545,7 @@ namespace Bank01 {
 
 private: System::Void registerExit_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Close();
+	Application::Exit();
 }
 
 private: System::Void switcher(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
@@ -586,6 +589,11 @@ private: System::Void SignUpValidation(System::Object^  sender, System::EventArg
 	SignUpNID->Text = "NATIONAL ID";
 	SignUpEmail->Text = "EMAIL";
 	SignUpBD->Value = SignUpBD->MaxDate;
+}
+private: System::Void SignInValidation(System::Object^  sender, System::EventArgs^  e) {
+	this->Hide();
+	Bank01::CDashBoard^ cd=gcnew CDashBoard();
+	cd->Show();
 }
 };
 }

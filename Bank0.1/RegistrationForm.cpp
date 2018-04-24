@@ -1,3 +1,4 @@
+#include "Header.h"
 #include "RegistrationForm.h"
 
 using namespace System;
