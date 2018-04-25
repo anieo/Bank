@@ -1,4 +1,5 @@
   Bank01.Account.resources - Embedded, ContainedInManifestFile, 
+  Bank01.ADashBoard.resources - Embedded, ContainedInManifestFile, 
   Bank01.CDashBoard.resources - Embedded, ContainedInManifestFile, 
   Bank01.RegistrationForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
@@ -22,6 +23,9 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Class Bank01.Account: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.UserControl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Bank01.ADashBoard: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Bank01.CDashBoard: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form

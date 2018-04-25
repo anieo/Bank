@@ -108,12 +108,19 @@ namespace Bank01 {
 			this->CDBTopBar = (gcnew System::Windows::Forms::Panel());
 			this->CDBExit = (gcnew System::Windows::Forms::Button());
 			this->CDBMAIN = (gcnew System::Windows::Forms::Panel());
-			this->CDBSidePanel = (gcnew System::Windows::Forms::Panel());
-			this->CDBAccountsList = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->CDBLine = (gcnew System::Windows::Forms::Panel());
-			this->CDBHR = (gcnew System::Windows::Forms::Panel());
-			this->CDBADDAccount = (gcnew System::Windows::Forms::Button());
 			this->CDBContainer = (gcnew System::Windows::Forms::Panel());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->CDBDeleteAccount = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->BCDAccountID = (gcnew System::Windows::Forms::Label());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->CDBDeposit = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->Accounts = (gcnew System::Windows::Forms::ComboBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->CDBAccountSave = (gcnew System::Windows::Forms::Button());
 			this->CDBDuration = (gcnew System::Windows::Forms::TextBox());
@@ -122,26 +129,19 @@ namespace Bank01 {
 			this->CDBAccountType = (gcnew System::Windows::Forms::ComboBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->CDBATlabel = (gcnew System::Windows::Forms::Label());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->Accounts = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->CDBDeposit = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->BCDAccountID = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->CDBDeleteAccount = (gcnew System::Windows::Forms::Button());
+			this->CDBSidePanel = (gcnew System::Windows::Forms::Panel());
+			this->CDBAccountsList = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->CDBLine = (gcnew System::Windows::Forms::Panel());
+			this->CDBHR = (gcnew System::Windows::Forms::Panel());
+			this->CDBADDAccount = (gcnew System::Windows::Forms::Button());
 			this->CDBTopBar->SuspendLayout();
 			this->CDBMAIN->SuspendLayout();
+			this->CDBContainer->SuspendLayout();
+			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->CDBSidePanel->SuspendLayout();
 			this->CDBAccountsList->SuspendLayout();
-			this->CDBContainer->SuspendLayout();
-			this->panel2->SuspendLayout();
-			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// CDBTopBar
@@ -185,67 +185,6 @@ namespace Bank01 {
 			this->CDBMAIN->Size = System::Drawing::Size(831, 477);
 			this->CDBMAIN->TabIndex = 1;
 			// 
-			// CDBSidePanel
-			// 
-			this->CDBSidePanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
-				static_cast<System::Int32>(static_cast<System::Byte>(40)));
-			this->CDBSidePanel->Controls->Add(this->CDBAccountsList);
-			this->CDBSidePanel->Controls->Add(this->CDBLine);
-			this->CDBSidePanel->Controls->Add(this->CDBHR);
-			this->CDBSidePanel->Controls->Add(this->CDBADDAccount);
-			this->CDBSidePanel->Dock = System::Windows::Forms::DockStyle::Left;
-			this->CDBSidePanel->Location = System::Drawing::Point(0, 0);
-			this->CDBSidePanel->Name = L"CDBSidePanel";
-			this->CDBSidePanel->Size = System::Drawing::Size(242, 477);
-			this->CDBSidePanel->TabIndex = 0;
-			this->CDBSidePanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::panel1_Paint);
-			// 
-			// CDBAccountsList
-			// 
-			this->CDBAccountsList->AutoScroll = true;
-			this->CDBAccountsList->Controls->Add(this->label6);
-			this->CDBAccountsList->Dock = System::Windows::Forms::DockStyle::Top;
-			this->CDBAccountsList->Location = System::Drawing::Point(0, 53);
-			this->CDBAccountsList->Name = L"CDBAccountsList";
-			this->CDBAccountsList->Size = System::Drawing::Size(242, 421);
-			this->CDBAccountsList->TabIndex = 5;
-			this->CDBAccountsList->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::CDBAccountsList_Paint);
-			// 
-			// CDBLine
-			// 
-			this->CDBLine->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
-				static_cast<System::Int32>(static_cast<System::Byte>(90)));
-			this->CDBLine->Dock = System::Windows::Forms::DockStyle::Top;
-			this->CDBLine->Location = System::Drawing::Point(0, 52);
-			this->CDBLine->Name = L"CDBLine";
-			this->CDBLine->Size = System::Drawing::Size(242, 1);
-			this->CDBLine->TabIndex = 4;
-			this->CDBLine->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::CDBLine_Paint);
-			// 
-			// CDBHR
-			// 
-			this->CDBHR->Dock = System::Windows::Forms::DockStyle::Top;
-			this->CDBHR->Location = System::Drawing::Point(0, 49);
-			this->CDBHR->Name = L"CDBHR";
-			this->CDBHR->Size = System::Drawing::Size(242, 3);
-			this->CDBHR->TabIndex = 3;
-			// 
-			// CDBADDAccount
-			// 
-			this->CDBADDAccount->BackColor = System::Drawing::Color::Transparent;
-			this->CDBADDAccount->Dock = System::Windows::Forms::DockStyle::Top;
-			this->CDBADDAccount->FlatAppearance->BorderSize = 0;
-			this->CDBADDAccount->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->CDBADDAccount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(111)), static_cast<System::Int32>(static_cast<System::Byte>(111)),
-				static_cast<System::Int32>(static_cast<System::Byte>(111)));
-			this->CDBADDAccount->Location = System::Drawing::Point(0, 0);
-			this->CDBADDAccount->Name = L"CDBADDAccount";
-			this->CDBADDAccount->Size = System::Drawing::Size(242, 49);
-			this->CDBADDAccount->TabIndex = 2;
-			this->CDBADDAccount->Text = L"ADD NEW ACCOUNT";
-			this->CDBADDAccount->UseVisualStyleBackColor = false;
-			this->CDBADDAccount->Click += gcnew System::EventHandler(this, &CDashBoard::CDBADDAccount_Click);
-			// 
 			// CDBContainer
 			// 
 			this->CDBContainer->Controls->Add(this->panel1);
@@ -255,6 +194,131 @@ namespace Bank01 {
 			this->CDBContainer->Name = L"CDBContainer";
 			this->CDBContainer->Size = System::Drawing::Size(591, 477);
 			this->CDBContainer->TabIndex = 1;
+			// 
+			// panel1
+			// 
+			this->panel1->Controls->Add(this->CDBDeleteAccount);
+			this->panel1->Controls->Add(this->label5);
+			this->panel1->Controls->Add(this->label4);
+			this->panel1->Controls->Add(this->label3);
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Controls->Add(this->BCDAccountID);
+			this->panel1->Controls->Add(this->panel3);
+			this->panel1->Controls->Add(this->button2);
+			this->panel1->Controls->Add(this->CDBDeposit);
+			this->panel1->Controls->Add(this->textBox1);
+			this->panel1->Controls->Add(this->Accounts);
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(591, 477);
+			this->panel1->TabIndex = 4;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::panel1_Paint_2);
+			// 
+			// CDBDeleteAccount
+			// 
+			this->CDBDeleteAccount->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CDBDeleteAccount->Location = System::Drawing::Point(406, 419);
+			this->CDBDeleteAccount->Name = L"CDBDeleteAccount";
+			this->CDBDeleteAccount->Size = System::Drawing::Size(134, 29);
+			this->CDBDeleteAccount->TabIndex = 11;
+			this->CDBDeleteAccount->Text = L"delete";
+			this->CDBDeleteAccount->UseVisualStyleBackColor = true;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(227, 221);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(47, 16);
+			this->label5->TabIndex = 10;
+			this->label5->Text = L"months";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(227, 174);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(53, 16);
+			this->label4->TabIndex = 9;
+			this->label4->Text = L"Balance";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(64, 277);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(19, 16);
+			this->label3->TabIndex = 8;
+			this->label3->Text = L"ID";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(64, 221);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(37, 16);
+			this->label1->TabIndex = 7;
+			this->label1->Text = L"Depit";
+			// 
+			// BCDAccountID
+			// 
+			this->BCDAccountID->AutoSize = true;
+			this->BCDAccountID->Location = System::Drawing::Point(64, 174);
+			this->BCDAccountID->Name = L"BCDAccountID";
+			this->BCDAccountID->Size = System::Drawing::Size(19, 16);
+			this->BCDAccountID->TabIndex = 6;
+			this->BCDAccountID->Text = L"ID";
+			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				static_cast<System::Int32>(static_cast<System::Byte>(90)));
+			this->panel3->Location = System::Drawing::Point(0, 136);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(591, 2);
+			this->panel3->TabIndex = 5;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Location = System::Drawing::Point(406, 85);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(134, 23);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// CDBDeposit
+			// 
+			this->CDBDeposit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(206)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->CDBDeposit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CDBDeposit->Location = System::Drawing::Point(406, 25);
+			this->CDBDeposit->Name = L"CDBDeposit";
+			this->CDBDeposit->Size = System::Drawing::Size(134, 24);
+			this->CDBDeposit->TabIndex = 2;
+			this->CDBDeposit->Text = L"Dsposit";
+			this->CDBDeposit->UseVisualStyleBackColor = false;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(58, 87);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(188, 21);
+			this->textBox1->TabIndex = 1;
+			this->textBox1->Text = L"Enter Balance";
+			// 
+			// Accounts
+			// 
+			this->Accounts->FormattingEnabled = true;
+			this->Accounts->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Cash" });
+			this->Accounts->Location = System::Drawing::Point(58, 25);
+			this->Accounts->Name = L"Accounts";
+			this->Accounts->Size = System::Drawing::Size(188, 24);
+			this->Accounts->TabIndex = 0;
+			this->Accounts->Text = L"Choose Payments";
 			// 
 			// panel2
 			// 
@@ -338,130 +402,31 @@ namespace Bank01 {
 			this->CDBATlabel->TabIndex = 0;
 			this->CDBATlabel->Text = L"Choose Account Type :";
 			// 
-			// panel1
+			// CDBSidePanel
 			// 
-			this->panel1->Controls->Add(this->CDBDeleteAccount);
-			this->panel1->Controls->Add(this->label5);
-			this->panel1->Controls->Add(this->label4);
-			this->panel1->Controls->Add(this->label3);
-			this->panel1->Controls->Add(this->label1);
-			this->panel1->Controls->Add(this->BCDAccountID);
-			this->panel1->Controls->Add(this->panel3);
-			this->panel1->Controls->Add(this->button2);
-			this->panel1->Controls->Add(this->CDBDeposit);
-			this->panel1->Controls->Add(this->textBox1);
-			this->panel1->Controls->Add(this->Accounts);
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(591, 477);
-			this->panel1->TabIndex = 4;
-			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::panel1_Paint_2);
+			this->CDBSidePanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			this->CDBSidePanel->Controls->Add(this->CDBAccountsList);
+			this->CDBSidePanel->Controls->Add(this->CDBLine);
+			this->CDBSidePanel->Controls->Add(this->CDBHR);
+			this->CDBSidePanel->Controls->Add(this->CDBADDAccount);
+			this->CDBSidePanel->Dock = System::Windows::Forms::DockStyle::Left;
+			this->CDBSidePanel->Location = System::Drawing::Point(0, 0);
+			this->CDBSidePanel->Name = L"CDBSidePanel";
+			this->CDBSidePanel->Size = System::Drawing::Size(242, 477);
+			this->CDBSidePanel->TabIndex = 0;
+			this->CDBSidePanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::panel1_Paint);
 			// 
-			// Accounts
+			// CDBAccountsList
 			// 
-			this->Accounts->FormattingEnabled = true;
-			this->Accounts->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Cash" });
-			this->Accounts->Location = System::Drawing::Point(58, 25);
-			this->Accounts->Name = L"Accounts";
-			this->Accounts->Size = System::Drawing::Size(188, 24);
-			this->Accounts->TabIndex = 0;
-			this->Accounts->Text = L"Choose Payments";
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(58, 87);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(188, 21);
-			this->textBox1->TabIndex = 1;
-			this->textBox1->Text = L"Enter Balance";
-			// 
-			// CDBDeposit
-			// 
-			this->CDBDeposit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(206)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->CDBDeposit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->CDBDeposit->Location = System::Drawing::Point(406, 25);
-			this->CDBDeposit->Name = L"CDBDeposit";
-			this->CDBDeposit->Size = System::Drawing::Size(134, 24);
-			this->CDBDeposit->TabIndex = 2;
-			this->CDBDeposit->Text = L"Dsposit";
-			this->CDBDeposit->UseVisualStyleBackColor = false;
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-				static_cast<System::Int32>(static_cast<System::Byte>(35)));
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(406, 85);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(134, 23);
-			this->button2->TabIndex = 3;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = false;
-			// 
-			// panel3
-			// 
-			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
-				static_cast<System::Int32>(static_cast<System::Byte>(90)));
-			this->panel3->Location = System::Drawing::Point(0, 136);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(591, 2);
-			this->panel3->TabIndex = 5;
-			// 
-			// BCDAccountID
-			// 
-			this->BCDAccountID->AutoSize = true;
-			this->BCDAccountID->Location = System::Drawing::Point(64, 174);
-			this->BCDAccountID->Name = L"BCDAccountID";
-			this->BCDAccountID->Size = System::Drawing::Size(19, 16);
-			this->BCDAccountID->TabIndex = 6;
-			this->BCDAccountID->Text = L"ID";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(64, 221);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(37, 16);
-			this->label1->TabIndex = 7;
-			this->label1->Text = L"Depit";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(64, 277);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(19, 16);
-			this->label3->TabIndex = 8;
-			this->label3->Text = L"ID";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(227, 174);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(53, 16);
-			this->label4->TabIndex = 9;
-			this->label4->Text = L"Balance";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(227, 221);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(47, 16);
-			this->label5->TabIndex = 10;
-			this->label5->Text = L"months";
-			// 
-			// CDBDeleteAccount
-			// 
-			this->CDBDeleteAccount->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->CDBDeleteAccount->Location = System::Drawing::Point(406, 419);
-			this->CDBDeleteAccount->Name = L"CDBDeleteAccount";
-			this->CDBDeleteAccount->Size = System::Drawing::Size(134, 29);
-			this->CDBDeleteAccount->TabIndex = 11;
-			this->CDBDeleteAccount->Text = L"delete";
-			this->CDBDeleteAccount->UseVisualStyleBackColor = true;
+			this->CDBAccountsList->AutoScroll = true;
+			this->CDBAccountsList->Controls->Add(this->label6);
+			this->CDBAccountsList->Dock = System::Windows::Forms::DockStyle::Top;
+			this->CDBAccountsList->Location = System::Drawing::Point(0, 53);
+			this->CDBAccountsList->Name = L"CDBAccountsList";
+			this->CDBAccountsList->Size = System::Drawing::Size(242, 421);
+			this->CDBAccountsList->TabIndex = 5;
+			this->CDBAccountsList->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::CDBAccountsList_Paint);
 			// 
 			// label6
 			// 
@@ -482,6 +447,41 @@ namespace Bank01 {
 			this->label6->TabIndex = 12;
 			this->label6->Text = L"Account Type\r\nID\r\n";
 			// 
+			// CDBLine
+			// 
+			this->CDBLine->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				static_cast<System::Int32>(static_cast<System::Byte>(90)));
+			this->CDBLine->Dock = System::Windows::Forms::DockStyle::Top;
+			this->CDBLine->Location = System::Drawing::Point(0, 52);
+			this->CDBLine->Name = L"CDBLine";
+			this->CDBLine->Size = System::Drawing::Size(242, 1);
+			this->CDBLine->TabIndex = 4;
+			this->CDBLine->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CDashBoard::CDBLine_Paint);
+			// 
+			// CDBHR
+			// 
+			this->CDBHR->Dock = System::Windows::Forms::DockStyle::Top;
+			this->CDBHR->Location = System::Drawing::Point(0, 49);
+			this->CDBHR->Name = L"CDBHR";
+			this->CDBHR->Size = System::Drawing::Size(242, 3);
+			this->CDBHR->TabIndex = 3;
+			// 
+			// CDBADDAccount
+			// 
+			this->CDBADDAccount->BackColor = System::Drawing::Color::Transparent;
+			this->CDBADDAccount->Dock = System::Windows::Forms::DockStyle::Top;
+			this->CDBADDAccount->FlatAppearance->BorderSize = 0;
+			this->CDBADDAccount->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CDBADDAccount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(111)), static_cast<System::Int32>(static_cast<System::Byte>(111)),
+				static_cast<System::Int32>(static_cast<System::Byte>(111)));
+			this->CDBADDAccount->Location = System::Drawing::Point(0, 0);
+			this->CDBADDAccount->Name = L"CDBADDAccount";
+			this->CDBADDAccount->Size = System::Drawing::Size(242, 49);
+			this->CDBADDAccount->TabIndex = 2;
+			this->CDBADDAccount->Text = L"ADD NEW ACCOUNT";
+			this->CDBADDAccount->UseVisualStyleBackColor = false;
+			this->CDBADDAccount->Click += gcnew System::EventHandler(this, &CDashBoard::CDBADDAccount_Click);
+			// 
 			// CDashBoard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 16);
@@ -498,14 +498,14 @@ namespace Bank01 {
 			this->Text = L"CDashBoard";
 			this->CDBTopBar->ResumeLayout(false);
 			this->CDBMAIN->ResumeLayout(false);
+			this->CDBContainer->ResumeLayout(false);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->CDBSidePanel->ResumeLayout(false);
 			this->CDBAccountsList->ResumeLayout(false);
 			this->CDBAccountsList->PerformLayout();
-			this->CDBContainer->ResumeLayout(false);
-			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}

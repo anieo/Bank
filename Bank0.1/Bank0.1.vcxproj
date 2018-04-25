@@ -139,12 +139,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="ADashBoard.cpp" />
     <ClCompile Include="CDashBoard.cpp" />
     <ClCompile Include="RegistrationForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ADashBoard.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="CDashBoard.h">
       <FileType>CppForm</FileType>
@@ -157,6 +161,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADashBoard.resx">
+      <DependentUpon>ADashBoard.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CDashBoard.resx">
       <DependentUpon>CDashBoard.h</DependentUpon>

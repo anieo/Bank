@@ -24,9 +24,7 @@ namespace Bank01 {
 			//
 			//TODO: Add the constructor code here
 			//
-			this->Hide();
-			Bank01::CDashBoard^ cd = gcnew CDashBoard();
-			cd->Show();
+
 		}
 
 	protected:
