@@ -1,6 +1,7 @@
 #pragma once
 #include "Header.h"
 
+
 namespace Bank01 {
 
 	using namespace System;
@@ -18,10 +19,14 @@ namespace Bank01 {
 	public:
 		RegistrationForm(void)
 		{
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+			this->Hide();
+			Bank01::CDashBoard^ cd = gcnew CDashBoard();
+			cd->Show();
 		}
 
 	protected:
@@ -36,58 +41,30 @@ namespace Bank01 {
 			}
 		}
 
-
-
-
-
-
 	private: Bunifu::Framework::UI::BunifuDragControl^  SignInDrag;
 	private: System::Windows::Forms::Panel^  SignUpPanel;
-
-
 	private: System::Windows::Forms::Panel^  SignInPanel;
 	private: System::Windows::Forms::LinkLabel^  SignInLINK;
-
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
 	private: System::Windows::Forms::TextBox^  SignInPassword;
-
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
 	private: System::Windows::Forms::TextBox^  SignInID;
-
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Button^  registerExit;
 	private: System::Windows::Forms::DateTimePicker^  SignUpBD;
-
 	private: System::Windows::Forms::TextBox^  SignUpGender;
-
-
-
 	private: System::Windows::Forms::TextBox^  SignUpNID;
-
 	private: System::Windows::Forms::TextBox^  SignUpSName;
 	private: System::Windows::Forms::TextBox^  SignUpEmail;
 	private: System::Windows::Forms::TextBox^  SignUpPassword;
 	private: System::Windows::Forms::TextBox^  SignUpREPassword;
-
-
-
-
 	private: System::Windows::Forms::TextBox^  SignUpFName;
 	private: System::Windows::Forms::PictureBox^  pictureBox4;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::LinkLabel^  SignUpLink;
-
 	private: System::Windows::Forms::Button^  SignUpButton;
-
-
-
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
 
 
 

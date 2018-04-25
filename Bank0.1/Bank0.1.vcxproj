@@ -104,6 +104,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,10 +138,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
     <ClCompile Include="CDashBoard.cpp" />
     <ClCompile Include="RegistrationForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Account.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="CDashBoard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -149,6 +155,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDashBoard.resx">
+      <DependentUpon>CDashBoard.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.h</DependentUpon>
     </EmbeddedResource>
