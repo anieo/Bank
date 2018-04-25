@@ -3,12 +3,12 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
-
+using namespace Bank01;
 [STAThreadAttribute]
 void main(array<String^> ^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Bank01::RegistrationForm registration;
+	RegistrationForm registration;
 	Application::Run(%registration);
 }
