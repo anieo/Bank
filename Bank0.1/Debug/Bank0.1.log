@@ -1,3 +1,10 @@
-﻿  Account.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Bank0.1.vcxproj -> C:\Users\Ali maher\documents\visual studio 2015\Projects\Bank0.1\Debug\Bank0.1.exe
-  Bank0.1.vcxproj -> C:\Users\Ali maher\documents\visual studio 2015\Projects\Bank0.1\Debug\Bank0.1.pdb (Partial PDB)
+﻿  Account.cpp
+  ADashBoard.cpp
+  CDashBoard.cpp
+  RegistrationForm.cpp
+RegistrationForm.cpp(9): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Generating Code...
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Account.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  Bank0.1.vcxproj -> C:\Users\Ali maher\Documents\Visual Studio 2015\Projects\Bank0.1\Debug\Bank0.1.exe
+  Bank0.1.vcxproj -> C:\Users\Ali maher\Documents\Visual Studio 2015\Projects\Bank0.1\Debug\Bank0.1.pdb (Partial PDB)
